@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hashtag:hover,
+.hashtag {
+  background-color: rgb(223, 175, 126);
+  border-radius: 5px;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.hashtag1:hover {
+  background-color: rgb(223, 175, 126);
+  border-radius: 5px;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.profileCircles {
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  font-size: larger;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(175, 215, 248);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in;
+}
+
+.profileCircles:hover {
+  background-color: steelblue;
+}
