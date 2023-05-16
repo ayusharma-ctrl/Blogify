@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Reset</title>
+</head>
+<body>
+  <p><%= mailContent %>,</p>
+  <p>Please click on the link below:</p>
+  <p><a href="<%= resetLink %>"><%= resetLink %></a></p>
+  <p>If you did not request, please ignore this email.</p>
+  <p>Thank you,</p>
+  <p>The <%= appName %> Team</p>
+</body>
+</html>

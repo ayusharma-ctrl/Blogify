@@ -1,0 +1,32 @@
+{
+  "name": "blogify-social-media-app-ayusharma-ctrl",
+  "version": "1.0.0",
+  "description": "Blogify is a feature-rich MERN app that enables users to create, share, and engage with blogs. It offers CRUD operations, profile management, token-based email authentication, following functionality, likes and bookmarks, comment posting, and real-time updates. With 40+ REST APIs, secure login, and protected routes, Blogify provides a seamless and interactive social media experience for bloggers.",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "ayusharma-ctrl",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cli-color": "^2.0.3",
+    "connect-mongodb-session": "^3.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0",
+    "nodemailer": "^6.9.1",
+    "socket.io": "^4.6.1",
+    "validator": "^13.9.0"
+  }
+}
