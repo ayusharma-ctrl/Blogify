@@ -15,7 +15,7 @@ const UserCard = ({ info, setDataUpdater, setValue }) => {
 
   const fetchFollowOrNot = async () => {
     try {
-      const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/follow/check/${info?._id}`)
+      const { data } = await axios.get(`/api/blog/follow/check/${info?._id}`)
       if (data.success) {
         setDoiFollow(data.iFollowOther)
       }

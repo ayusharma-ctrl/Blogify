@@ -22,7 +22,7 @@ const EditBlog = ({ blogData, setIsEditBlog }) => {
         }
 
         try {
-            const { data } = await axios.post(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/edit/${blogData?._id}`,
+            const { data } = await axios.post(`/api/blog/edit/${blogData?._id}`,
                 { title: title, intro: intro, body: body, conclusion: conclusion },
                 {
                     headers: {

@@ -30,7 +30,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const getTotalCount = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/count/${blogData._id}`)
+            const { data } = await axios.get(`/api/blog/count/${blogData._id}`)
             if (data.success) {
                 const array = [data.like, data.bookmark]
                 setTotalCount(array)
@@ -42,7 +42,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const checkLike = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/like/${blogData._id}`)
+            const { data } = await axios.get(`/api/blog/like/${blogData._id}`)
             if (data.success) {
                 setLike(true)
             }
@@ -53,7 +53,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const checkBookmark = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bookmark/${blogData._id}`)
+            const { data } = await axios.get(`/api/blog/bookmark/${blogData._id}`)
             if (data.success) {
                 setBookmark(true)
             }
@@ -64,7 +64,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const handleLikeBtn = async () => {
         try {
-            const { data } = await axios.post(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/like/${blogData._id}`)
+            const { data } = await axios.post(`/api/blog/like/${blogData._id}`)
             console.log(data.message)
             if (data.success) {
                 setLike(true)
@@ -77,7 +77,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const handleDislikeBtn = async () => {
         try {
-            const { data } = await axios.delete(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/like/${blogData._id}`)
+            const { data } = await axios.delete(`/api/blog/like/${blogData._id}`)
             if (data.success) {
                 setLike(false)
                 toast.success(data.message)
@@ -89,7 +89,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const handleBookmarkBtn = async () => {
         try {
-            const { data } = await axios.post(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bookmark/${blogData._id}`)
+            const { data } = await axios.post(`/api/blog/bookmark/${blogData._id}`)
             if (data.success) {
                 setBookmark(true)
                 toast.success(data.message)
@@ -101,7 +101,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const handleRemoveBookmarkBtn = async () => {
         try {
-            const { data } = await axios.delete(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bookmark/${blogData._id}`)
+            const { data } = await axios.delete(`/api/blog/bookmark/${blogData._id}`)
             if (data.success) {
                 setBookmark(false)
                 toast.success(data.message)
@@ -113,7 +113,7 @@ const BlogDialog = ({ setBlogDetails, setScheduler, blogData }) => {
 
     const handleDeleteBtn = async () => {
         try {
-            const { data } = await axios.put(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bin/move/${blogData._id}`)
+            const { data } = await axios.put(`/api/blog/bin/move/${blogData._id}`)
             if (data.success) {
                 toast.success(data.message)
                 setTimeout(() => {

@@ -39,7 +39,7 @@ const PostBlog = ({ setAddBlog }) => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/blog/post",
+            const { data } = await axios.post("/api/blog/post",
                 { title: title, intro: intro, body: body, conclusion: conclusion, hashtags: hashtags },
                 {
                     headers: {

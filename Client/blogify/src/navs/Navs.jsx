@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 
@@ -26,7 +26,7 @@ const Navs = () => {
     // func to check for a valid session
     const checkAuth = async () => {
         try {
-            const { data } = await axios.get('https://blogify-ayusharma-ctrl.onrender.com/api/user/check-session');
+            const { data } = await axios.get('/api/user/check-session');
             if (data.status === 200 && data.success) {
                 setAuth(true);
                 setUsername(data.user.username);
@@ -43,7 +43,10 @@ const Navs = () => {
         }
     }
 
-    checkAuth();
+    // calling this func on first render
+    useEffect(()=>{
+        checkAuth();
+    },[])
 
     return (
         <AuthContext.Provider value={{ auth, username, name, userID, email, setAuth }} >

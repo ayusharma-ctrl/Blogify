@@ -38,7 +38,7 @@ const Header = () => {
     // func to logout
     const handleLogout = async () => {
         try {
-            const { data } = await axios.get("https://blogify-ayusharma-ctrl.onrender.com/api/user/logout")
+            const { data } = await axios.get("/api/user/logout")
             if (data.success) {
                 setAuth(false)
                 navigate("/login")

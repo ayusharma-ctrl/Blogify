@@ -14,7 +14,7 @@ const Bin = () => {
     const getAllBlogs = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get("https://blogify-ayusharma-ctrl.onrender.com/api/blog/bin")
+            const { data } = await axios.get("/api/blog/bin")
             // console.log(data)
             if (data.success) {
                 setAllBlogs(data.blog)

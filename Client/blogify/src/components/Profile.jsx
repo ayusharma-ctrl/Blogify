@@ -20,7 +20,7 @@ const Profile = () => {
     
     const fetchUserData = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/user/profile/${userID}`)
+            const { data } = await axios.get(`/api/user/profile/${userID}`)
             if (data.success) {
                 setUserData(data.user)
             }
@@ -31,7 +31,7 @@ const Profile = () => {
 
     const fetchFollowers = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/followers/${userID}`)
+            const { data } = await axios.get(`/api/blog/followers/${userID}`)
             if (data.success) {
                 setFollowers(data.followers)
             }
@@ -42,7 +42,7 @@ const Profile = () => {
 
     const fetchFollowings = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/followings/${userID}`)
+            const { data } = await axios.get(`/api/blog/followings/${userID}`)
             if (data.success) {
                 setFollowings(data.followings)
             }

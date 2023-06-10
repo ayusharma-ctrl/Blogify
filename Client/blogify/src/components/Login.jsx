@@ -35,7 +35,7 @@ const Login = () => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/verify-resend",
+            const { data } = await axios.post("/api/user/verify-resend",
                 { loginId: usernameEmail },
                 {
                     headers: {
@@ -62,7 +62,7 @@ const Login = () => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/password/reset",
+            const { data } = await axios.post("/api/user/password/reset",
                 { loginId: usernameEmail },
                 {
                     headers: {
@@ -92,7 +92,7 @@ const Login = () => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/login",
+            const { data } = await axios.post(`/api/user/login`,
                 { loginId: username, password: password },
                 {
                     headers: {

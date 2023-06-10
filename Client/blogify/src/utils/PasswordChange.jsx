@@ -34,7 +34,7 @@ const PasswordChange = ({ setPasswordChange }) => {
             return;
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/password/update",
+            const { data } = await axios.post("/api/user/password/update",
                 { currentPassword: currentPass, newPassword: newPass, confirmPassword: confirmPass },
                 {
                     headers: {

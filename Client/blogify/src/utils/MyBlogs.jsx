@@ -12,7 +12,7 @@ const MyBlogs = () => {
     const getAllBlogs = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/my?skip=${skip}`)
+            const { data } = await axios.get(`/api/blog/my?skip=${skip}`)
             // console.log(data)
             if (data.success) {
                 setAllBlogs(data.blogs)

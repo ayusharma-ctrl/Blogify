@@ -18,7 +18,7 @@ const ProfileEdit = ({ setIsEdit, currName, currUsername, setDataUpdater }) => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/profile/update",
+            const { data } = await axios.post("/api/user/profile/update",
                 { name: name, username: username },
                 {
                     headers: {

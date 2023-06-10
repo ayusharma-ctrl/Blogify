@@ -27,7 +27,7 @@ const CardForBlog = ({ blogData, setScheduler }) => {
 
   const handleRecover = async () => {
     try {
-      const { data } = await axios.put(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bin/recover/${blogData?._id}`)
+      const { data } = await axios.put(`/api/blog/bin/recover/${blogData?._id}`)
       if (data.success) {
         toast.success(data.message)
         setTimeout(() => {

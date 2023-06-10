@@ -12,7 +12,7 @@ const Timeline = () => {
     const getAllBlogs = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/my/following?skip=${skip}`)
+            const { data } = await axios.get(`/api/blog/my/following?skip=${skip}`)
             // console.log(data)
             if (data.success) {
                 setAllBlogs(data.blog)

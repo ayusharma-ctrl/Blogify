@@ -16,7 +16,7 @@ const ProfileMain = ({ userData, followers, followings, setDataUpdater }) => {
 
     const fetchFollowOrNot = async () => {
         try {
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/follow/check/${userData?._id}`)
+            const { data } = await axios.get(`/api/blog/follow/check/${userData?._id}`)
             if (data.success) {
                 setDoiFollow(data.iFollowOther)
                 setDoTheyFollow(data.otherFollowMe)
@@ -28,7 +28,7 @@ const ProfileMain = ({ userData, followers, followings, setDataUpdater }) => {
 
     const handleFollow = async () => {
         try {
-            const { data } = await axios.post(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/follow/${userData?._id}`)
+            const { data } = await axios.post(`/api/blog/follow/${userData?._id}`)
             if (data.success) {
                 toast.success(data.message)
                 setDataUpdater(prev => prev + 1)
@@ -42,7 +42,7 @@ const ProfileMain = ({ userData, followers, followings, setDataUpdater }) => {
 
     const handleUnfollow = async () => {
         try {
-            const { data } = await axios.delete(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/follow/${userData?._id}`)
+            const { data } = await axios.delete(`/api/blog/follow/${userData?._id}`)
             if (data.success) {
                 toast.success(data.message)
                 setDataUpdater(prev => prev + 1)

@@ -14,7 +14,7 @@ import Bin from '../utils/Bin';
 import PostBlog from '../utils/PostBlog';
 
 
-// connection between our server and client, here we give server uri
+// connection between our server and client, here we give server uri "http://localhost:8000"
 export const socket = io.connect('https://blogify-ayusharma-ctrl.onrender.com')
 
 const Dashboard = () => {

@@ -14,7 +14,7 @@ const LikedByMe = () => {
     const getAllBlogs = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/like?skip=${skip}`)
+            const { data } = await axios.get(`/api/blog/like?skip=${skip}`)
             // console.log(data)
             if (data.success) {
                 setAllBlogs(data.blog)

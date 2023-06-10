@@ -12,7 +12,7 @@ const SavedByMe = () => {
     const getAllBlogs = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/bookmark?skip=${skip}`)
+            const { data } = await axios.get(`/api/blog/bookmark?skip=${skip}`)
             // console.log(data)
             if (data.success) {
                 setAllBlogs(data.blog)

@@ -17,7 +17,7 @@ const Explore = () => {
     const getHashtags = async () => {
         try {
             setLoading(true)
-            const { data } = await axios.get("https://blogify-ayusharma-ctrl.onrender.com/api/blog/hashtag/trending")
+            const { data } = await axios.get("/api/blog/hashtag/trending")
             // console.log(data)
             if (data.success) {
                 // console.log(data.hashtag)
@@ -34,7 +34,7 @@ const Explore = () => {
         try {
             console.log(skip)
             setLoading(true)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/all?skip=${skip}`)
+            const { data } = await axios.get(`/api/blog/all?skip=${skip}`)
             // console.log(data)
             if (data.success) {
                 console.log(data.blogs)
@@ -57,7 +57,7 @@ const Explore = () => {
         try {
             setLoading(true)
             const hash = hashcode.slice(1)
-            const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/hashtag?skip=${skip}&hash=${hash}`)
+            const { data } = await axios.get(`/api/blog/hashtag?skip=${skip}&hash=${hash}`)
             if (data.success) {
                 console.log(data.blog)
                 setAllBlogs(data.blog)

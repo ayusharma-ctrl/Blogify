@@ -15,7 +15,7 @@ const ProfileBlog = ({ userData }) => {
   const fetchBlogs = async () => {
     try {
       setLoading(true)
-      const { data } = await axios.get(`https://blogify-ayusharma-ctrl.onrender.com/api/blog/all/${userData._id}?skip=${skip}`)
+      const { data } = await axios.get(`/api/blog/all/${userData._id}?skip=${skip}`)
       if (data.success) {
         setBlogsData(data.blogs)
       }

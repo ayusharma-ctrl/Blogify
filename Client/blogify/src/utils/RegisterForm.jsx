@@ -38,7 +38,7 @@ const RegisterForm = ({ setLogin }) => {
             return
         }
         try {
-            const { data } = await axios.post("https://blogify-ayusharma-ctrl.onrender.com/api/user/register",
+            const { data } = await axios.post("/api/user/register",
                 { name: name, username: username, email: email, password: password, confirmPassword: confirmPassword },
                 {
                     headers: {
