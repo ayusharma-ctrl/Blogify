@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://blogify-ayusharma-ctrl.onrender.com"
+        }
+    ]
+}
