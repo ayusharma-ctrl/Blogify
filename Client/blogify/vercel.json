@@ -3,6 +3,10 @@
         {
             "source": "/api/:match*",
             "destination": "https://blogify-ayusharma-ctrl.onrender.com/api/:match*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/"
         }
     ]
 }
